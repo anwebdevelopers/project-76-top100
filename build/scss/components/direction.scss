@@ -1,0 +1,114 @@
+.direction__title {
+    line-height: .6;
+}
+.direction__box {
+    color: #8A94A3;
+    background-color: #fff;
+    // padding: 6rem calc(7% - 2rem);
+    padding: 6rem calc(7% - 2rem) 12rem calc(7% - 2rem);
+    margin: 0 -7%;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.direction__item {
+    flex: 0 0 auto;
+    // width: calc(33.3333% - 4rem);
+    width: calc(50% - 4rem);
+    margin: 4rem 2rem 0 2rem;
+
+    display: flex;
+}
+.direction__item-img {
+    margin: 0;
+    flex: 0 0 auto;
+    width: 35%;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        border-radius: 50%;
+    }
+}
+.direction__item-box {
+    flex: 0 0 auto;
+    align-self: center;
+    width: 60%;
+    margin: 0 0 0 5%;
+}
+
+.direction__item-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #0F3C7F;
+    word-wrap: break-word;
+}
+.direction__item-links {
+    margin: 2rem 0 0 0;
+    font-size: 1.8rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    a {
+        flex: 0 0 auto;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: inherit;
+        transition: .5s;
+        word-wrap: break-word;
+        &:hover, &:active {
+            color: $color-accent-blue;
+        }
+    }
+}
+.direction__button {
+    margin: -4.5rem 0 0 0;
+}
+
+
+@media only screen and (max-width : 1440px) {
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width :1024px) {
+    .direction__item {
+        display: block;
+        text-align: center;
+    }
+    .direction__item-img {
+        width: auto;
+    }
+    .direction__item-box {
+        margin: 2rem 0 0 0;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    // .direction__item {
+    //     width: calc(50% - 4rem);
+    // }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+    .direction__box {
+        display: block;
+    }
+    .direction__item {
+        width: auto;
+    }
+}

@@ -1,0 +1,110 @@
+.timetable {
+    // background-image: linear-gradient(#fff, #fff);
+    // background-position: 0 28rem;
+    // background-size: 100% 100%;
+    // background-repeat: no-repeat;
+    // position: relative;
+    // overflow: hidden;
+}
+
+.timetable__title {
+    margin-bottom: -.2em;
+}
+.timetable__table {
+    color: #8A94A3;
+    background-color: #fff;
+    padding: 8rem 7% 12rem 7%;
+    margin: 0 -7%;
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     z-index: -1;
+    //     // top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     height: 100%;
+    //     background-color: #fff;
+    // }
+    table {
+        width: 100%;
+        tr {
+            &:first-child {
+                .timetable__table-date {
+                    margin-top: 0;
+                }
+            }
+        }
+        th, td {
+            vertical-align: top;
+            padding: .8rem .5rem;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+.timetable__table-date {
+    margin: 3rem 0 2rem 0;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0F3C7F;
+    font-family: 'Bebas Neue';
+
+    &[data-decor-text] {
+        margin: 8rem 0 2rem 0;
+        position: relative;
+        &:before {
+            content: attr(data-decor-text);
+            position: absolute;
+            left: 0;
+            right: 0;
+            // top: 50%;
+            // transform: translateY(-50%);
+            bottom: 0;
+            font-size: 10rem;
+            line-height: .75;
+            white-space: nowrap;
+            // text-align: center;
+            color: rgba(15, 60, 127, 0.1);
+        }
+    }
+}
+
+.timetable__table-time {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #0F3C7F;
+    // text-align: right;
+    white-space: nowrap;
+
+    position: relative;
+    padding-right: 2rem;
+    &:before {
+        content: '';
+        position: absolute;
+        top: .7rem;
+        right: -.3rem;
+        border: .3rem solid transparent;
+        border-left: .5rem solid $color-accent-green;
+    }
+}
+.timetable__table-title {
+    margin: 0;
+    font-size: 1.7rem;
+    color: #0F3C7F;
+    font-weight: 500;
+    + .timetable__table-text {
+        margin-top: 1.5rem;
+    }
+}
+.timetable__table-text {
+    margin: 0;
+}
+.timetable__button {
+    margin: -4.5rem 0 0 0;
+}

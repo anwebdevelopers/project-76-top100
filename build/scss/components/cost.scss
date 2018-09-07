@@ -1,0 +1,52 @@
+.cost__box {
+    margin: 2rem 0 0 0;
+    display: flex;
+}
+.cost__text {
+    flex: 0 0 auto;
+    width: 60%;
+    // font-size: 2.2rem;
+}
+.cost__button {
+    flex: 0 0 auto;
+    align-self: flex-end;
+    width: 35%;
+    margin: 0 0 0 5%;
+}
+
+@media only screen and (max-width : 1440px) {
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width :1024px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .cost__box {
+        display: block;
+    }
+    .cost__text {
+        width: auto;
+    }
+    .cost__button {
+        width: auto;
+        margin: 6rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

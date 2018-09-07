@@ -1,0 +1,60 @@
+.program {
+
+}
+.program__box {
+    display: flex;
+}
+.program__title {
+    flex: 0 0 auto;
+    width: 48%;
+}
+.program__text {
+    flex: 0 0 auto;
+    width: 48%;
+    margin: 10rem 0 0 4%;
+}
+.program__button {
+    margin: 8vh 0 0 0;
+}
+@media only screen and (max-width : 1440px) {
+    .program__text {
+        margin: 13rem 0 0 4%;
+    }
+}
+
+@media only screen and (max-width : 1280px) {
+    .program__text {
+        margin: 12rem 0 0 4%;
+    }
+}
+
+@media only screen and (max-width :1024px) {
+    .program__text {
+        margin: 11rem 0 0 4%;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .program__box {
+        display: block;
+    }
+    .program__title {
+        width: auto;
+    }
+    .program__text {
+        margin: 6rem 0 0 0;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

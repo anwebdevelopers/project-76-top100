@@ -1,0 +1,60 @@
+.participants {
+
+}
+.participants__box {
+    display: flex;
+}
+.participants__title {
+    flex: 0 0 auto;
+    width: 48%;
+}
+.participants__text {
+    flex: 0 0 auto;
+    width: 48%;
+    margin: 10rem 0 0 4%;
+}
+.participants__button {
+    margin: 8vh 0 0 0;
+}
+@media only screen and (max-width : 1440px) {
+    .participants__text {
+        margin: 13rem 0 0 4%;
+    }
+}
+
+@media only screen and (max-width : 1280px) {
+    .participants__text {
+        margin: 12rem 0 0 4%;
+    }
+}
+
+@media only screen and (max-width :1024px) {
+    .participants__text {
+        margin: 11rem 0 0 4%;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .participants__box {
+        display: block;
+    }
+    .participants__title {
+        width: auto;
+    }
+    .participants__text {
+        margin: 6rem 0 0 0;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

@@ -1,0 +1,103 @@
+.intro {
+
+}
+
+.intro__title {
+    margin: 0;
+    font-weight: normal;
+}
+.intro__title-small {
+    display: block;
+    font-size: 2.5rem;
+    font-family: 'Gotham Pro';
+}
+.intro__title-medium {
+    display: block;
+    font-weight: 900;
+    font-size: 6rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-family: 'Gotham Pro';
+}
+.intro__title-large {
+    display: block;
+    font-family: 'Bebas Neue';
+    font-size: 20rem;
+    font-weight: 600;
+    line-height: .9;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.intro__title-box {
+    display: flex;
+    align-items: center;
+    > * {
+        flex: 0 1 auto;
+    }
+    .intro__title-large + .intro__title-small {
+        margin: 0 0 0 3rem;
+        padding: 0 0 0 3.4rem;
+        background-image: linear-gradient($color-accent-green, $color-accent-green);
+        background-position: 0 0;
+        background-size: .4rem 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.intro__text {
+    margin: 4vh 0 0 0;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Gotham Pro';
+    strong {
+        color: $color-accent-green;
+    }
+}
+.intro__button {
+    margin: 8vh 0 0 0;
+}
+
+
+
+@media only screen and (max-width : 1440px) {
+
+}
+
+@media only screen and (max-width : 1280px) {
+    .intro__title-large {
+        font-size: 18rem;
+    }
+}
+
+@media only screen and (max-width :1024px) {
+    .intro__title-large {
+        font-size: 16rem;
+    }
+
+}
+
+@media only screen and (max-width : 768px) {
+    .intro__title-large {
+        font-size: 14rem;
+    }
+    .intro__title-box {
+        display: block;
+        .intro__title-large + .intro__title-small {
+            margin: 2rem 0 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

@@ -1,0 +1,60 @@
+.organiser {
+
+}
+.organiser__box {
+    display: flex;
+}
+.organiser__title {
+    flex: 0 0 auto;
+    width: 48%;
+}
+.organiser__text {
+    flex: 0 0 auto;
+    width: 48%;
+    margin: 10rem 0 0 4%;
+}
+.organiser__button {
+    margin: 8vh 0 0 0;
+}
+@media only screen and (max-width : 1440px) {
+    .organiser__text {
+        margin: 13rem 0 0 4%;
+    }
+}
+
+@media only screen and (max-width : 1280px) {
+    .organiser__text {
+        margin: 12rem 0 0 4%;
+    }
+}
+
+@media only screen and (max-width :1024px) {
+    .organiser__text {
+        margin: 11rem 0 0 4%;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .organiser__box {
+        display: block;
+    }
+    .organiser__title {
+        width: auto;
+    }
+    .organiser__text {
+        margin: 6rem 0 0 0;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

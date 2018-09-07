@@ -1,0 +1,140 @@
+.partnership__box {
+    display: flex;
+}
+.partnership__content {
+    flex: 0 0 auto;
+    width: 55%;
+}
+.partnership__picture {
+    flex: 0 0 auto;
+    align-self: flex-end;
+    width: 40%;
+    margin: 0 0 0 5%;
+}
+.partnership__text {
+    margin: 2rem 0 0 0;
+}
+.partnership__button {
+    margin: 4rem 0 0 0;
+}
+.partnership__picture {
+    // margin: 0 0 10rem 0;
+
+    position: relative;
+}
+.partnership__picture-img {
+    margin: 0;
+    // position: absolute;
+    // bottom: 0;
+    // top: 0;
+    // max-width: 100%;
+    // max-height: 100%;
+    img {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+
+.partnership__picture-box {
+    // position: absolute;
+    // right: 0;
+    // bottom: 10rem;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0F3C7F;
+
+    padding: 5rem 10%;
+    // margin-left: 15%;
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     z-index: -1;
+    //     left: 0;
+    //     right: 0;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     height: 0;
+    //     padding-bottom: 100%;
+    //     background-color: #0F3C7F;
+    //     border-radius: 50%;
+    // }
+}
+.partnership__picture-title {
+    font-size: 3rem;
+    font-weight: 500;
+}
+.partnership__picture-subtitle {
+    margin: 2rem 0 0 0;
+    font-size: 2.4rem;
+    color: $color-accent-green;
+}
+.partnership__picture-links {
+    margin: 2rem 0 0 0;
+    font-size: 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    a {
+        flex: 0 0 auto;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: inherit;
+        transition: .5s;
+        word-wrap: break-word;
+        &:hover, &:active {
+            color: $color-accent-blue;
+        }
+    }
+}
+
+@media only screen and (max-width : 1440px) {
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width :1024px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .partnership__box {
+        display: block;
+    }
+    .partnership__content {
+        width: auto;
+    }
+    .partnership__picture {
+        width: auto;
+        margin: 4rem 0 0 0;
+    }
+    .partnership__picture-img {
+        text-align: center;
+    }
+    .partnership__picture-box {
+        position: relative;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}
