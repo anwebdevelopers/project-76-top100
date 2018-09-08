@@ -1,0 +1,215 @@
+.nav {
+    position: fixed;
+    z-index: 999;
+    left: 8.4rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-main;
+    transform: translateY(-100%);
+    transition: .5s;
+    &.active {
+        transform: translateY(0);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(rgba(10, 4, 88, 0.7), rgba(10, 4, 88, 0.7)), url(../img/bg-nav.jpg);
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    > .container {
+        padding-top: 10rem;
+        height: 100%;
+    }
+}
+.nav__box {
+    display: flex;
+    max-height: 100%;
+}
+.nav__menu {
+    flex: 0 0 auto;
+    width: 50%;
+    padding-right: 7%;
+    // height: 100%;
+    overflow-y: auto;
+    // direction: rtl;
+
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        // direction: initial;
+        li {
+            + li {
+                margin-top: 3rem;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                transition: .5s;
+                &:hover, &:active, &.active {
+                    color: $color-accent-green;
+                }
+            }
+        }
+    }
+}
+.nav__form {
+    flex: 0 0 auto;
+    width: 50%;
+    padding-left: 7%;
+    overflow-y: auto;
+}
+.form {
+
+}
+.form__title {
+    margin: 0;
+    font-size: 6rem;
+    line-height: 1;
+    font-family: 'Bebas Neue';
+}
+.form__text {
+    margin: 2rem 0 0 0;
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+.form__input {
+    display: block;
+    max-width: 30rem;
+    margin: 4rem 0 0 0;
+    span {
+        display: block;
+        font-size: 1.2rem;
+    }
+    input {
+        border: none;
+        background: none;
+        outline: none;
+        border-radius: 0;
+        box-shadow: none;
+        display: block;
+        width: 100%;
+        height: 5rem;
+        font-size: 1.6rem;
+        color: inherit;
+        border-bottom: 1px solid currentColor;
+    }
+}
+.form__button {
+    margin: 8rem 0 0 0;
+}
+.popup {
+    position: fixed;
+    z-index: 1000;
+    left: 8.4rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: $color-main;
+    transform: translateY(-100%);
+    transition: .5s;
+    &.active {
+        transform: translateY(0);
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+.popup__form {
+    padding: 10rem 7%;
+
+}
+.popup__close {
+    position: absolute;
+    z-index: 1;
+    left: 3rem;
+    top: 6.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff);
+    background-position: 0 50%, 50% 0;
+    background-size: 100% 2px, 2px 100%;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    cursor: pointer;
+    &:hover, &:active {
+        color: $color-accent-green;
+        background-image: linear-gradient($color-accent-blue,$color-accent-blue),linear-gradient($color-accent-blue,$color-accent-blue);
+    }
+}
+@media only screen and (max-width : 1440px) {
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width :1024px) {
+    .nav,
+    .popup {
+        left: 7rem;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .nav {
+        &:before {
+            display: none;
+        }
+        overflow-y: auto;
+    }
+    .nav__box {
+        display: block;
+
+    }
+    .nav__menu {
+        width:auto;
+        padding-right: 0;
+        overflow-y: visible;
+    }
+    .nav__form {
+        margin: 10rem 0 0 0;
+        width: auto;
+        padding-left: 0;
+        overflow-y: visible;
+    }
+    .nav,
+    .popup {
+        left: 0;
+    }
+    .popup__close {
+        left: 2rem;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .popup__close {
+        top: .5rem;
+        left: .5rem;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}

@@ -8,21 +8,21 @@
 *:focus:-ms-input-placeholder      {color: transparent}
 
 *::-webkit-input-placeholder {
-	color: #666;
-	opacity: 1;
+	color: #fff;
+	opacity: .5;
 }
 *:-moz-placeholder {
-	color: #666;
-	opacity: 1;
+	color: #fff;
+	opacity: .5;
 }
 *::-moz-placeholder {
-	color: #666;
-	opacity: 1;
+	color: #fff;
+	opacity: .5;
 }
 
 *:-ms-input-placeholder {
-	color: #666;
-	opacity: 1;
+	color: #fff;
+	opacity: .5;
 }
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
@@ -107,7 +107,7 @@ a {
 	outline: none !important;
 }
 .button {
-	a {
+	a, button {
 		@include btn;
 		max-width: 100%;
 		padding: 3rem 5rem;
@@ -245,7 +245,7 @@ a {
 @import "components/reasons.scss";
 @import "components/organiser.scss";
 @import "components/direction.scss";
-
+@import "components/nav.scss";
 
 
 
@@ -256,7 +256,7 @@ a {
 
 //Load Libs SASS
 // @import "html/libs/animate/animate.sass";
-//@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
+@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
 //@import "html/libs/superfish/dist/css/superfish";
 //@import "html/libs/font-awesome/scss/font-awesome.scss";
 //@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";

@@ -23,6 +23,33 @@
 
 <body>
 
+	<div class="nav">
+		<div class="container">
+			<div class="nav__box">
+				<nav class="nav__menu"></nav>
+				<form class="nav__form form">
+					<h3 class="form__title">Свяжитесь с нами</h3>
+					<p class="form__text">Оставьте заявку и мы свяжемся с вами</p>
+					<label class="form__input">
+						<span>Ваше имя</span>
+						<input type="text" placeholder="Введите ваше имя">
+					</label>
+					<label class="form__input">
+						<span>Ваш email</span>
+						<input type="email" placeholder="Введите ваш email">
+					</label>
+					<label class="form__input">
+						<span>Ваш телефон</span>
+						<input type="tel" placeholder="Введите ваш телефон">
+					</label>
+					<div class="form__button button">
+						<button type="submit">Отправить заявку</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<header class="header">
 		<div class="container">
 			<div class="header__box">
@@ -41,9 +68,7 @@
 					</div>
 				</div>
 				<a class="header__phone" href="tel:+74997042484">
-					<svg viewBox="0 0 20 20" fill="currentColor">
-						<path d="M19.9084 14.9V17.9C19.9084 19 19.0084 19.9 17.9084 19.9C17.8084 19.9 17.8084 19.9 17.7084 19.9C14.6084 19.6 11.7084 18.5 9.10844 16.8C6.70844 15.3 4.60844 13.2 3.10844 10.8C1.40844 8.2 0.308439 5.3 0.00843918 2.2C-0.0915608 1.1 0.708439 0.1 1.80844 0C1.90844 0 1.90844 0 2.00844 0H5.00844C6.00844 0 6.90844 0.7 7.00844 1.7C7.10844 2.7 7.40844 3.6 7.70844 4.5C8.00844 5.3 7.80844 6.1 7.20844 6.6L6.00844 7.9C7.40844 10.4 9.50844 12.5 12.0084 13.9L13.3084 12.6C13.9084 12.1 14.7084 11.9 15.4084 12.2C16.3084 12.5 17.2084 12.8 18.2084 12.9C19.2084 13 19.9084 13.9 19.9084 14.9Z"/>
-					</svg>
+					<svg><use xlink:href="#icon-phone"></use></svg>
 					<span>+7(499) 704-24-84</span>
 				</a>
 			</div>
@@ -55,10 +80,10 @@
 		<div class="aside__social">
 			<a href="#">FACEBOOK</a>
 		</div>
-		<button class="aside__menu-button"></button>
+		<button class="aside__nav-button"></button>
 	</aside>
 
-	<section class="intro section" style="background-image: url(img/bg-intro.jpg);">
+	<section class="intro section" data-name="Интро" style="background-image: url(img/bg-intro.jpg);">
 		<div class="container">
 			<h1 class="intro__title">
 				<span class="intro__title-small">Бизнес-тур</span>
@@ -73,12 +98,12 @@
 				Турция, Белек <br>Gloria Sports Arena
 			</p>
 			<div class="intro__button button">
-				<a href="#">Купить билет</a>
+				<a href="#callback" class="call-popup">Купить билет</a>
 			</div>
 		</div>
 	</section>
 
-	<section class="value section" style="background-image: url(img/bg-value.jpg);">
+	<section class="value section" data-name="В ЧЕМ ЦЕННОСТЬ УЧАСТИЯ?" style="background-image: url(img/bg-value.jpg);">
 		<div class="decor" style="right:-5%;bottom:-10%;">
 			<img src="img/img-decor-round-medium.svg" alt="">
 		</div>
@@ -96,7 +121,7 @@
 		</div>
 	</section>
 
-	<section class="participants section" style="background-image: url(img/bg-participants.jpg);">
+	<section class="participants section" data-name="УЧАСТНИКИ" style="background-image: url(img/bg-participants.jpg);">
 		<div class="decor" style="left:35%;top:20%;">
 			<img src="img/img-decor-round-medium.svg" alt="">
 		</div>
@@ -122,7 +147,7 @@
 		</div>
 	</section>
 
-	<section class="program section" style="background-image: url(img/bg-program.jpg);">
+	<section class="program section" data-name="ПРОГРАММА" style="background-image: url(img/bg-program.jpg);">
 		<div class="decor" style="left:45%;top:60%;">
 			<img src="img/img-decor-round-small.svg" alt="">
 		</div>
@@ -144,10 +169,10 @@
 		</div>
 	</section>
 
-	<section class="timetable section">
+	<section class="timetable section" data-name="Расписание">
 		<div class="container">
 			<h2 class="timetable__title title">Расписание</h2>
-			<div class="timetable__table">
+			<div class="timetable__table" data-jq-clipthru="light-background">
 				<table>
 					<tr>
 						<td colspan="2">
@@ -360,10 +385,10 @@
 		</div>
 	</section>
 
-	<section class="speakers section">
+	<section class="speakers section" data-name="СПИКЕРЫ">
 		<div class="container">
 			<h2 class="speakers__title title">СПИКЕРЫ</h2>
-			<div class="speakers__box">
+			<div class="speakers__box" data-jq-clipthru="light-background">
 				<div class="speakers__item">
 					<figure class="speakers__item-img">
 						<img src="img/img-speakers.jpg" alt="">
@@ -425,7 +450,7 @@
 		</div>
 	</section>
 
-	<section class="cost section" style="background-image: url(img/bg-cost.jpg);">
+	<section class="cost section" data-name="СТОИМОСТЬ" style="background-image: url(img/bg-cost.jpg);">
 		<div class="decor" style="bottom:-15%;right:5%;">
 			<img src="img/img-decor-round-large.svg" alt="">
 		</div>
@@ -467,7 +492,7 @@
 		</div>
 	</section>
 
-	<section class="partnership section" style="background-image: url(img/bg-partnership.jpg);">
+	<section class="partnership section" data-name="Партнерство" style="background-image: url(img/bg-partnership.jpg);">
 		<div class="decor" style="bottom:-5%;right:30%;">
 			<img src="img/img-decor-round-medium.svg" alt="">
 		</div>
@@ -510,15 +535,14 @@
 		</div>
 	</section>
 
-	<!-- <section class="reasons section" style="background-image: url(img/bg-reasons.jpg);"> -->
-	<section class="reasons section">
+	<section class="reasons section" data-name="ПОЧЕМУ НАДО ЕХАТЬ?">
 		<div class="container">
 			<div class="reasons__text text">
 				<p>Событие проводится <br>командой организаторов MARSPO</p>
 			</div>
 			<h2 class="reasons__title title">ПОЧЕМУ НАДО ЕХАТЬ?</h2>
-			<div class="reasons__box">
-				
+			<div class="reasons__box" data-jq-clipthru="light-background">
+
 				<div class="reasons__item">
 					<div class="reasons__item-title">НОВЫЕ СВЯЗИ</div>
 					<div class="reasons__item-img">
@@ -561,7 +585,7 @@
 				</div>
 			</div>
 			<div class="reasons__button button">
-				<a href="#">Стать партнером</a>
+				<a href="#">Купить билет</a>
 			</div>
 			<div class="reasons__box">
 
@@ -569,7 +593,7 @@
 		</div>
 	</section>
 
-	<section class="organiser section" style="background-image: url(img/bg-organiser.jpg);">
+	<section class="organiser section" data-name="Организатор" style="background-image: url(img/bg-organiser.jpg);">
 		<div class="decor" style="right:5%;top:10%;">
 			<img src="img/img-decor-round-large.svg" alt="">
 		</div>
@@ -587,10 +611,10 @@
 		</div>
 	</section>
 
-	<section class="direction section">
+	<section class="direction section" data-name="Дирекция">
 		<div class="container">
 			<h2 class="direction__title title">Дирекция</h2>
-			<div class="direction__box">
+			<div class="direction__box" data-jq-clipthru="light-background">
 				<div class="direction__item">
 					<figure class="direction__item-img">
 						<img src="img/img-direction.jpg" alt="">
@@ -624,16 +648,42 @@
 		</div>
 	</section>
 
-	<footer class="footer section">
-		<div class="container">
-			<button class="footer__scroll-button"></button>
-		</div>
+
+
+	<div class="popup" id="callback">
+		<div class="popup__close"></div>
+		<form class="popup__form form">
+			<h3 class="form__title">Оставьте заявку <br>и мы свяжемся с вами</h3>
+			<label class="form__input">
+				<span>Ваше имя</span>
+				<input type="text" placeholder="Введите ваше имя">
+			</label>
+			<label class="form__input">
+				<span>Ваш email</span>
+				<input type="email" placeholder="Введите ваш email">
+			</label>
+			<label class="form__input">
+				<span>Ваш телефон</span>
+				<input type="tel" placeholder="Введите ваш телефон">
+			</label>
+			<div class="form__button button">
+				<button type="submit">Отправить заявку</button>
+			</div>
+		</form>
+	</div>
+	
+	<footer class="footer">
+		<button class="button-scroll-top"></button>
+		<button class="button-scroll-down"></button>
 	</footer>
 
+
 	<div class="hidden">
+
 		<!-- SVG SPRITE -->
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<symbol id="icon-id" viewBox="0 0 512 512">
+			<symbol id="icon-phone" viewBox="0 0 20 20" fill="currentColor">
+				<path d="M19.9084 14.9V17.9C19.9084 19 19.0084 19.9 17.9084 19.9C17.8084 19.9 17.8084 19.9 17.7084 19.9C14.6084 19.6 11.7084 18.5 9.10844 16.8C6.70844 15.3 4.60844 13.2 3.10844 10.8C1.40844 8.2 0.308439 5.3 0.00843918 2.2C-0.0915608 1.1 0.708439 0.1 1.80844 0C1.90844 0 1.90844 0 2.00844 0H5.00844C6.00844 0 6.90844 0.7 7.00844 1.7C7.10844 2.7 7.40844 3.6 7.70844 4.5C8.00844 5.3 7.80844 6.1 7.20844 6.6L6.00844 7.9C7.40844 10.4 9.50844 12.5 12.0084 13.9L13.3084 12.6C13.9084 12.1 14.7084 11.9 15.4084 12.2C16.3084 12.5 17.2084 12.8 18.2084 12.9C19.2084 13 19.9084 13.9 19.9084 14.9Z"/>
 			</symbol>
 		</svg>
 	</div>

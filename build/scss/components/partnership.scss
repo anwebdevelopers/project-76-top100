@@ -121,6 +121,9 @@
     }
     .partnership__picture-img {
         text-align: center;
+        img {
+            max-width: 70%;
+        }
     }
     .partnership__picture-box {
         position: relative;

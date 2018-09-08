@@ -10,6 +10,9 @@
         padding-top: 0;
         padding-bottom: 0;
     }
+    &.light-background {
+        background-color: $color-main;
+    }
 }
 
 .header__box {
@@ -82,6 +85,7 @@
 
 .aside {
     position: fixed;
+    z-index: 997;
     top: 0;
     left: 0;
     bottom: 0;
@@ -134,7 +138,7 @@
     }
 }
 
-.aside__menu-button {
+.aside__nav-button {
     @include btn;
     flex: 0 0 auto;
     position: relative;
@@ -213,6 +217,48 @@
         }
     }
 }
+.button-scroll {
+    &-top,
+    &-down {
+        @include btn;
+        position: fixed;
+        z-index: 998;
+        right: 7%;
+        bottom: 10rem;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        color: $color-accent-green;
+        border: .4rem solid currentColor;
+        transition: .5s;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 1.5rem;
+            height: 1.5rem;
+
+            border-left: .3rem solid currentColor;
+            border-bottom: .3rem solid currentColor;
+        }
+        &:hover, &:active {
+            color: $color-accent-blue;
+        }
+    }
+    &-top {
+        display: none;
+        &:before {
+            transform: translate(-50%, -30%) rotate(135deg);
+        }
+    }
+    &-down {
+
+        &:before {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+}
 @media only screen and (max-width : 1440px) {
 
 }
@@ -251,8 +297,22 @@
             margin-left: 0;
         }
     }
-    .aside__menu-button {
+    .aside__nav-button {
         margin: 6rem 0 0 0;
+    }
+    .button-scroll-down {
+        display: none;
+    }
+    .button-scroll-top {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        display: block !important;
+    }
+    .footer {
+        padding: 2rem 0 3rem 0;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -290,8 +350,14 @@
             transform: none;
         }
     }
-    .aside__menu-button {
+    .aside__nav-button {
         margin: 0 0 0 auto;
+        &.active {
+            position: fixed;
+            z-index: 1000;
+            left: .5rem;
+            top: 1rem;
+        }
     }
 }
 
