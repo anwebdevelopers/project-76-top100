@@ -12,13 +12,11 @@ $(function() {
     let nevMenuUl = '<ul>';
 
     $('.section').each(function(i) {
-        let activeClass = '';
+
         const sectionName = $(this).attr('data-name'),
             href = sectionName.replace(/\s+/g, '-');
-        if (i === 0) {
-            activeClass = 'active';
-        }
-        nevMenuUl += '<li><a class=\"' + activeClass + '\" href=\"#' + href + '\">' + sectionName + '</a></li>';
+
+        nevMenuUl += '<li><a href=\"#' + href + '\">' + sectionName + '</a></li>';
     });
 
     nevMenuUl += "</ul>";
@@ -62,8 +60,6 @@ $(function() {
     //SECTIONS SCROLL
     /****************************************************************/
 
-
-
     function slideScroll() {
         if ($(window).width() <= 768) {
             $.scrollify.setOptions({
@@ -75,12 +71,8 @@ $(function() {
             $.scrollify({
                 section: '.section',
                 sectionName: 'name',
+                setHeights: true,
                 before: function(i, sections) {
-
-                    const sectionHref = sections[i].attr('data-name').replace(/\s+/g, '-');
-
-                    $('.nav__menu a').removeClass('active');
-                    $('.nav__menu').find('a[href=\"#' + sectionHref + '\"]').addClass('active');
 
                     if (sections[i].index('.section') === sections.length - 1) {
                         $('.button-scroll-top').fadeIn();
@@ -100,23 +92,11 @@ $(function() {
                 }
             });
             $.scrollify.enable();
-            $.scrollify.setOptions({
-                setHeights: true
-            });
         }
     }
 
     slideScroll();
 
-
-
-    /****************************************************************/
-    //HEADER MASK
-    /****************************************************************/
-    $('.header').clipthru({
-        autoUpdate: true,
-        autoUpdateInterval: 30
-    });
 
     /****************************************************************/
     //SCROLL TOP BUTTON
@@ -133,8 +113,15 @@ $(function() {
     /****************************************************************/
 
     function owlInit(element, resolution) {
-        if ($(window).width() <= resolution) {
-            $(element).addClass('owl-carousel').owlCarousel({
+        const elementBox = $('.' + element + '__box');
+
+        if ( $(window).width() <= resolution ) {
+
+            function counter () {
+                elementBox.attr('data-counter',+elementBox.find('.owl-item.active').index() + 1 + ' / ' + elementBox.find('.' + element + '__item').length)
+            }
+
+            elementBox.addClass('owl-carousel').owlCarousel({
                 loop: false,
                 items: 1,
                 nav: true,
@@ -142,21 +129,36 @@ $(function() {
                 autoplayTimeout: 5000,
                 autoplay: false,
                 smartSpeed: 1200,
-                dots: false
-            });
+                dots: false,
+                onInitialized: function() {counter()},
+                onTranslated: function() {counter()}
+            })
+
         } else {
-            $(element).trigger('destroy.owl.carousel').removeClass('owl-carousel');
+            elementBox.trigger('destroy.owl.carousel').removeClass('owl-carousel').removeAttr('data-counter');
         }
     }
-    owlInit('.speakers__box', 360);
-    owlInit('.reasons__box', 640);
+
+    owlInit('speakers', 360);
+
+    owlInit('reasons', 640);
 
 
 
     $(window).resize(function() {
         slideScroll();
-        owlInit('.speakers__box', 360);
-        owlInit('.reasons__box', 640);
+
+        owlInit('speakers', 360);
+
+        owlInit('reasons', 640);
+    });
+
+    /****************************************************************/
+    //HEADER MASK
+    /****************************************************************/
+    $('.header').clipthru({
+        autoUpdate: true,
+        autoUpdateInterval: 30
     });
 
 });
